@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event 1th</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style>
+        .box {
+            position:relative;
+            padding:40px;
+            background:#a1a1a1;
+            box-shadow: 10px 10px 10px 0 #000;
+        }
+        .box:after {
+            position:absolute;
+            top:0;
+            left:0;
+            content:"<div>";
+            color:#000;
+        }
+
+        .box p {
+            position: relative;
+            margin:0;
+            padding:40px;
+            background:#757575;
+            box-shadow: 10px 10px 10px 0 #000;
+        }
+        .box p:after {
+            position:absolute;
+            top:0;
+            left:0;
+            content:"<p>";
+            color:#000;
+        }
+
+        .box p a {
+            display:block;
+            position: relative;
+            padding:20px 40px;
+            background:#5c5c5c;
+            box-shadow: 10px 10px 10px 0 #000;
+        }
+        .box p a:after {
+            position:absolute;
+            top:0;
+            left:0;
+            content:"<a>";
+            color:#000;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="page-header text-center">
+        <h1>Event
+            <small>1th</small>
+        </h1>
+        <p>
+            <img src="../../img/evt.jpg" alt="">
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <h2>Event Bubbling</h2>
+            <div id="box1" class="box">
+                <p>
+                    <a href="#">&nbsp;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <h2>Event Capturing</h2>
+            <div id="box2" class="box">
+                <p>
+                    <a href="#">&nbsp;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/2.event/event-1th.js"></script>
+</body>
+
+</html>
