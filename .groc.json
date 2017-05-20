@@ -1,0 +1,10 @@
+{
+  "glob": [
+    "./js/*.js"
+  ],
+  "except": [
+    "./js/util.js"
+  ],
+  "github": false,
+  "out": "./docs/"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "js-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint js",
+    "eslint:watch": "esw -w js",
+    "jsdoc": "rimraf docs && jsdoc ./js/tab.js -p -a all -d ./docs",
+    "groc": "rimraf docs && groc"
+  },
+  "author": "poohding",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-watch": "^3.1.0",
+    "groc": "^0.8.0",
+    "rimraf": "^2.6.1"
+  }
+}
