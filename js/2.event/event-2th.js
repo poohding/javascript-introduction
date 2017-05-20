@@ -5,8 +5,11 @@ document.querySelector('#box1').addEventListener('click', function(e) {
 
 
 document.querySelector('#box2').addEventListener('click', function(e) {
-    e.preventDefault();
-    console.log(e.target);
+    if (e.target.nodeName === 'A') {
+        e.preventDefault();
+        console.log(e.target);
+    }
+
 }, false);
 
 document.querySelector('button').addEventListener('click', function() {

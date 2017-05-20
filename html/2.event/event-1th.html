@@ -9,13 +9,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <style>
-        .box {
+        #box1 {
+            position:relative;
+            padding:40px;
+            background:#a1a1a1;
+            box-shadow:inset 10px 10px 20px 0 #000;
+        }
+        #box1:after {
+            position:absolute;
+            top:4px;
+            left:10px;
+            content:"<div>";
+            color:#fff;
+            text-shadow:5px 5px 5px #000000;
+        }
+
+        #box1 p {
+            position: relative;
+            margin:0;
+            padding:40px;
+            background:#757575;
+            box-shadow:inset 10px 10px 20px 0 #000;
+        }
+        #box1 p:after {
+            position:absolute;
+            top:4px;
+            left:10px;
+            content:"<p>";
+            color:#fff;
+            text-shadow:5px 5px 5px #000000;
+        }
+
+        #box1 p a {
+            display:block;
+            position: relative;
+            padding:20px 40px;
+            background:#5c5c5c;
+            box-shadow:inset 10px 10px 20px 0 #000;
+        }
+        #box1 p a:after {
+            position:absolute;
+            top:4px;
+            left:10px;
+            content:"<a>";
+            color:#fff;
+            text-shadow:5px 5px 5px #000000;
+        }
+
+        #box2 {
             position:relative;
             padding:40px;
             background:#a1a1a1;
             box-shadow: 10px 10px 10px 0 #000;
         }
-        .box:after {
+        #box2:after {
             position:absolute;
             top:0;
             left:0;
@@ -23,14 +70,14 @@
             color:#000;
         }
 
-        .box p {
+        #box2 p {
             position: relative;
             margin:0;
             padding:40px;
             background:#757575;
             box-shadow: 10px 10px 10px 0 #000;
         }
-        .box p:after {
+        #box2 p:after {
             position:absolute;
             top:0;
             left:0;
@@ -38,14 +85,14 @@
             color:#000;
         }
 
-        .box p a {
+        #box2 p a {
             display:block;
             position: relative;
             padding:20px 40px;
             background:#5c5c5c;
             box-shadow: 10px 10px 10px 0 #000;
         }
-        .box p a:after {
+        #box2 p a:after {
             position:absolute;
             top:0;
             left:0;
