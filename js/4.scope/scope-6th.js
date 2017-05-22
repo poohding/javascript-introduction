@@ -2,8 +2,7 @@
  * Hoisting
  */
 
-/*
-debugger;
+// debugger;
 
 try {
     foo();
@@ -23,4 +22,3 @@ function foo() {
 var bar = function() {
     console.log(a); // ?
 };
-/*/
