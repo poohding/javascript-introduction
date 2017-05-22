@@ -10,13 +10,13 @@ var a = 'global';
 function foo(){
     var a = 'local';
 
-    console.log(a); // local
+    console.info("a:", a); // local
 
     function bar(){
-        console.log(a); // ?
+        console.info("a:", a); // ?
     }
     bar();
 }
 foo();
 
-console.log(a); // ?
+console.info("a:", a); // ?

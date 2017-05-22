@@ -14,9 +14,9 @@ function b() {
 b();
 
 try {
-    console.log(a); // ?
-    console.log(b); // ?
-    console.log(c); // ?
-} catch (e) {
-    console.log(e);
+    console.info("a:", a); // ?
+    console.info("b:", b); // ?
+    console.info("c:", c); // ?
+} catch (error) {
+    console.info("error:", error);
 }

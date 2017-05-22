@@ -10,10 +10,10 @@ function b() {
     var a = 1;
 }
 b();
-console.log(a); // ?
+console.info("a:", a); // ?
 
 // Non block-level scope
 if (true) {
     var a = 1;
 }
-console.log(a); // ?
+console.info("a:", a); // ?

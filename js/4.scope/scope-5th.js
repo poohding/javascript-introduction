@@ -12,6 +12,7 @@ function foo() {
 }
 
 function bar() {
-    console.log(a); // ?
+    console.info("a:", a); // ?
+    console.info("this: ", this) // ?
 }
 foo();
