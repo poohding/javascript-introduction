@@ -3,8 +3,7 @@
  * Inner Function
  */
 
-/*
-debugger;
+// debugger;
 
 var a = 'global';
 
@@ -21,4 +20,3 @@ function foo(){
 foo();
 
 console.log(a); // ?
- /*/
