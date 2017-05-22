@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tab Example</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <style>
         .tab-content {
             padding: 10px 20px;
@@ -56,16 +55,31 @@
 <script src="../../js/9.tab-menu/tmpl.js"></script>
 <script src="../../js/9.tab-menu/tab-menu-2th.js"></script>
 <script>
-    var dataObject = {
-        "albumId": 1,
-        "id": 1,
-        "title": "accusamus beatae ad facilis cum similique qui sunt",
-        "url": "http://placehold.it/600/92c952",
-        "thumbnailUrl": "http://placehold.it/150/92c952"
-    };
+    var myTab = new skpui.tab({
+        container: '#tab_1',
+        activeIndex: 0,
+        onTabChange: function(tab) {
+            console.log(tab);
 
-    var home = document.querySelector('#home');
-    home.innerHTML = tmpl('panel_tmpl', dataObject)
+            var tabPanel = tab.tabPanelItems[tab.activeIndex];
+
+            if (!tabPanel.innerHTML) {
+                var url = 'http://jsonplaceholder.typicode.com/photos/' + (tab.activeIndex + 1),
+                    oReq = new XMLHttpRequest();
+
+                tabPanel.classList.remove('active');
+                oReq.open('GET', url);
+                oReq.send();
+
+                oReq.addEventListener('load', function() {
+                    var htData = JSON.parse(this.responseText);
+
+                    tabPanel.innerHTML = tmpl("panel_tmpl", htData);
+                    tabPanel.classList.add('active');
+                });
+            }
+        }
+    });
 </script>
 </body>
 
