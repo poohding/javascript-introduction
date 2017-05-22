@@ -5,6 +5,7 @@ function addEventHandler() {
     // debugger;
     for (var i = 0, len = lists.length; i < len; i++) {
         lists[i].addEventListener('click', function() {
+            // debugger;
             console.log(i);
         });
     }
@@ -13,8 +14,11 @@ function addEventHandler() {
     /*
     // debugger;
     function showIndex(index) {
+        var i = index;
+
         return function() {
-            return console.log(index);
+            debugger;
+            return console.log(i);
         };
     }
 
@@ -27,8 +31,11 @@ function addEventHandler() {
     // debugger;
     for (var i = 0, len = lists.length; i < len; i++) {
         (function(j) {
+            var index = j;
+
             lists[i].addEventListener('click', function() {
-                console.log(j);
+                // debugger;
+                console.log(index);
             });
         }(i));
     }
@@ -37,8 +44,11 @@ function addEventHandler() {
     /*
     // debugger;
     lists.forEach(function(element, index) {
+        var i = index;
+
         element.addEventListener('click', function() {
-            console.log(index);
+            debugger;
+            console.log(i);
         });
     });
     //*/
