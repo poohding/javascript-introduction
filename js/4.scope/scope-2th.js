@@ -2,8 +2,7 @@
  * Function-level Scope
  */
 
-/*
-debugger;
+// debugger;
 
 var a = 0; // 0
 
@@ -18,4 +17,3 @@ if (true) {
     var a = 1;
 }
 console.log(a); // ?
- /*/

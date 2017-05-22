@@ -2,8 +2,7 @@
  * Lexical Scoping
  */
 
-/*
-debugger;
+// debugger;
 
 var a = 0;
 
@@ -16,4 +15,3 @@ function bar() {
     console.log(a); // ?
 }
 foo();
- /*/
