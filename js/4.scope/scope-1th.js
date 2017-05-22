@@ -2,7 +2,7 @@
  * Global Scope
  */
 
-// debugger;
+debugger;
 
 var a = 'global variable';
 

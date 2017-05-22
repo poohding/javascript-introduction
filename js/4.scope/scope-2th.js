@@ -2,7 +2,7 @@
  * Function-level Scope
  */
 
-// debugger;
+debugger;
 
 var a = 0; // 0
 

@@ -3,7 +3,7 @@
  * Inner Function
  */
 
-// debugger;
+debugger;
 
 var a = 'global';
 

@@ -2,7 +2,7 @@
  * Hoisting
  */
 
-// debugger;
+debugger;
 
 try {
     foo();

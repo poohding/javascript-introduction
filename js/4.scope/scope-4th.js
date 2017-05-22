@@ -2,7 +2,7 @@
  * Implied Globals
  */
 
-// debugger;
+debugger;
 
 var a = 'global';
 
@@ -13,7 +13,7 @@ function foo(){
 
     function bar(){
         b = 'b';
-        console.info("a:", a); // ?
+        console.info("b:", b); // ?
     }
     bar();
 }

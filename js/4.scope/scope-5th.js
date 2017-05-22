@@ -2,7 +2,7 @@
  * Lexical Scoping
  */
 
-// debugger;
+debugger;
 
 var a = 0;
 
