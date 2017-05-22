@@ -2,8 +2,7 @@
  * Global Scope
  */
 
-/*
-debugger;
+// debugger;
 
 var a = 'global variable';
 
@@ -21,4 +20,3 @@ try {
 } catch (e) {
     console.log(e);
 }
-/*/
