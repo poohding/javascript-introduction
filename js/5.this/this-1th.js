@@ -1,7 +1,8 @@
 var foo = {
     name: 'poohding',
     sayName: function() {
-        console.log(this); // this = foo;
+        console.info("this: ", this); // this = foo;
+        console.info("this === foo: ", this === foo); // true;
     }
 };
 
