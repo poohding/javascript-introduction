@@ -1,5 +1,5 @@
 function Car(make, model, year) {
-    console.log(this);
+    console.info("this:", this);
 
     this.make   = make;
     this.model  = model;
