@@ -1,78 +1,74 @@
-(function() {
-    console.group('function');
+debugger;
+console.group('function');
 
-    function foo() {
+function a() {
+    console.log(this); // ?
+
+    function b() {
+        console.log(this); // ?
+    }
+    b();
+}
+a();
+
+console.groupEnd('function');
+
+debugger;
+console.group('method');
+
+var c = {
+    name: 'poohding',
+    sayName: function() {
         console.log(this); // ?
 
-        function bar() {
+        var d = function() {
             console.log(this); // ?
-        }
-        bar();
+        };
+        d();
     }
-    foo();
-    console.groupEnd('function');
-}());
+};
 
+c.sayName();
 
-(function() {
-    console.group('method');
+console.groupEnd('method');
 
-    var foo = {
-        name: 'poohding',
-        sayName: function() {
-            console.log(this); // ?
+debugger;
+console.group('method with _this');
 
-            var bar = function() {
-                console.log(this); // ?
-            };
-            bar();
+var e = {
+    name: 'poohding',
+    sayName: function() {
+        var _this = this;
+
+        console.log(this); // ?
+
+        function f() {
+            console.log(_this); // ?
         }
-    };
+        f();
+    }
+};
 
-    foo.sayName();
+e.sayName();
 
-    console.groupEnd('method');
-}());
+console.groupEnd('method with _this');
 
-(function() {
-    console.group('method with _this');
+debugger;
+console.group('method with call');
 
-    var foo = {
-        name: 'poohding',
-        sayName: function() {
-            var _this = this;
+var f = {
+    name: 'poohding',
+    sayName: function() {
+        console.log(this); // ?
 
+        function g() {
             console.log(this); // ?
-
-            function bar() {
-                console.log(_this); // ?
-            }
-            bar();
         }
-    };
 
-    foo.sayName();
+        g.call(this);
+    }
+};
 
-    console.groupEnd('method with _this');
-}());
+f.sayName();
 
-(function() {
-    console.group('method with call');
-
-    var foo = {
-        name: 'poohding',
-        sayName: function() {
-            console.log(this); // ?
-
-            function bar() {
-                console.log(this); // ?
-            }
-
-            bar.call(this);
-        }
-    };
-
-    foo.sayName();
-
-    console.groupEnd('method with call');
-}());
+console.groupEnd('method with call');
